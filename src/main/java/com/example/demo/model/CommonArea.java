@@ -1,10 +1,33 @@
 package com.example.demo.model;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name = "commonArea")
 public class CommonArea {
 
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	@Column(name = "id")
+	private Long id;
+
+	@Column(name = "name")
 	private String name;
+
+	@Column(name = "location")
 	private String location;
+
+	@OneToOne
+	@JoinColumn(name = "extraCostId", referencedColumnName = "id")
 	private ExtraCost extraCost;
+
+	public Long getId () {
+		return id;
+	}
+
+	public void setId (Long id) {
+		this.id = id;
+	}
 
 	public String getName () {
 		return name;

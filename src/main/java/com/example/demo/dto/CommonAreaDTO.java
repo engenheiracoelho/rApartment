@@ -2,23 +2,10 @@ package com.example.demo.dto;
 
 import com.example.demo.model.ExtraCost;
 
-import javax.persistence.*;
-
 public class CommonAreaDTO {
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
-	@Column(name = "id")
-	private Long id;
-
-	@Column(name = "name")
 	private String name;
-
-	@Column(name = "location")
 	private String location;
-
-	@OneToOne
-	@JoinColumn(name = "extraCostId", referencedColumnName = "id")
 	private ExtraCost extraCost;
 
 	public String getName () {
