@@ -1,9 +1,32 @@
 # rApartment
 
-## Init
+---
 
-## Tools
-* [IntelliJ](https://www.jetbrains.com/idea/) - IDE para desenvolvimento.
+A simple applications to control common area booking on condominium .
 
-## Info
-* [Spring Boot Rest API](https://medium.com/better-programming/building-a-spring-boot-rest-api-a-php-developers-view-part-i-6add2e794646) -  Spring Boot API.
+### Configuration
+
+#### Create a new MySql schema on localhost database. 
+
+#### Configure access
+
+```
+spring.jpa.hibernate.ddl-auto=update
+spring.datasource.url=jdbc:mysql://${MYSQL_HOST:localhost}:4720/DATABASE_SCHEMA
+spring.datasource.username=root
+spring.datasource.password=pass
+```
+
+### Install
+
+#### Using npm
+
+```bash
+npm install
+```
+
+#### Start project
+
+```bash
+mvn spring-boot:run
+```
